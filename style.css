@@ -1,0 +1,246 @@
+:root{
+  --rooster-size: 50px;
+  --vh:100vh;
+  --vw:100vw;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  
+}
+
+body{
+  width: var(--vw);
+  height: var(--vh);
+  background-image:url(./dangus.webp);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.kaimas{
+    position: relative;
+    z-index: -1;
+    background-image: url(./kaimas.webp);
+    background-size: contain;
+    background-position: center bottom -20px;
+    background-repeat: no-repeat;
+    width: var(--vw);
+    height: var(--vh);
+}
+.timer {
+    position: absolute;
+    top:50px;
+    left: 50px;
+    font-size: 45px;
+    font-weight: bold;
+    color: black;
+}
+
+
+.square {
+    --top: -100px;
+    --left: -100px;
+    --color: #888;
+    width:var(--rooster-size);
+    height:var(--rooster-size);
+    position:absolute;
+    top:var(--top);
+    left:var(--left);
+    background-image: url(./gaidys.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.info{
+  min-height:150px;
+  width:680px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px 25px;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 10px 10px 10px #333;
+}
+
+.info button {
+  width: 80px;
+  margin-top: 40px;
+}
+
+.info-wrapper{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+
+.text-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+}
+
+
+.start-wrapper{
+    width: var(--vw);
+    height: var(--vh);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.start-info{
+  background-color: #fff;
+  border-radius: 10px;
+  min-width:350px;
+  width: 60%;
+  min-height: 500px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-image: url(./img/rooster-background.webp);
+  background-repeat: no-repeat;
+  background-size: 34%;
+  background-position: bottom -8px right -5px;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  width:80%;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.logo-wrapper .side-rooster {
+  width: 20%;
+}
+
+.logo-wrapper .logo {
+  width:80%;
+}
+
+.game-info{
+  width:100%;
+  height: 140px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px dotted black;
+  border-radius: 8px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.game-info::-webkit-scrollbar {
+  display: none;
+}
+
+.game-info-text{
+    /* overflow-y: scroll; */
+}
+
+.rooster-size-wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  min-height: 200px;
+  margin-bottom: 20px;
+  min-width: 300px;
+  gap: 15px;
+}
+
+.rooster-size-image{
+  width: var(--rooster-size);
+}
+
+.rooster-size-wrapper label {
+  display: block;
+}
+
+.round-setup{
+  display: flex;
+  gap: 40px;
+  margin-bottom:20px;
+}
+
+.btn-start {
+  background: #ffbf00;
+  background-image: -webkit-linear-gradient(top, #ffbf00, #f22727);
+  background-image: -moz-linear-gradient(top, #ffbf00, #f22727);
+  background-image: -ms-linear-gradient(top, #ffbf00, #f22727);
+  background-image: -o-linear-gradient(top, #ffbf00, #f22727);
+  background-image: linear-gradient(to bottom, #ffbf00, #f22727);
+  -webkit-border-radius: 11;
+  -moz-border-radius: 11;
+  border-radius: 11px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  color: #ffffff;
+  font-size: 24px;
+  padding: 15px 35px 15px 35px;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-start:hover {
+  background: #f22727;
+  background-image: -webkit-linear-gradient(top, #f22727, #ffbf00);
+  background-image: -moz-linear-gradient(top, #f22727, #ffbf00);
+  background-image: -ms-linear-gradient(top, #f22727, #ffbf00);
+  background-image: -o-linear-gradient(top, #f22727, #ffbf00);
+  background-image: linear-gradient(to bottom, #f22727, #ffbf00);
+  text-decoration: none;
+}
+
+.btn-pause-play{
+  position: absolute;
+  bottom: 20px;
+  right:20px;
+  font-size: 14px;
+  display: none;
+}
+
+.btn-reset{
+  position: absolute;
+  bottom: 20px;
+  right: 140px;
+  font-size: 14px;
+  display: none;
+}
