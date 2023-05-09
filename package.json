@@ -1,0 +1,16 @@
+{
+  "name": "2023_05_05_friday_challenge_7",
+  "version": "1.0.0",
+  "description": "Friday Challenge 7",
+  "main": "index.js",
+  "scripts": {
+    "dev": "dead-server --port=4320",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Team Leader - Mr. Povilas Gr. (https://github.com/BaubasDRSK)",
+  "license": "MIT",
+  "devDependencies": {
+    "dead-server": "^1.0.9"
+  }
+}
